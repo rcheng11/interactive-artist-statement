@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Artist's Statement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Teko:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Tutorial Overlay -->
+  <div class="tutorial-wrapper">
+    <div class="tutorial-overlay">
+    </div>
+    <div class="card tutorial-card">
+      <h1>This Artist Statement is Interactive</h1>
+      <p>Don't just read the statement! Experience what I mean for yourself:</p>
+      <p>Click the boxes on the top to mine for dirt, stone, iron, and diamonds.</p>
+      <p>Craft pokeballs using the materials you mined using the toolbar on the right.</p>
+      <p>Use pokeballs to get random pokemon by clicking on the pokeball!</p>
+      <p>Defeat the slime to upgrade the strength of your pickaxe!</p>
+      <p>You can craft a freeze potion to stop the slime on its tracks and make it take more damage for a short time!</p>
+      <p>Or craft a fire potion to do some serious damage!</p>
+      <p>Once the slime is defeated, you can craft a slime summon scroll to fight it again!</p>
+    </div>
+  </div>
+
+
+  <!-- ITEMS BAR -->
+  <div class="card item-bar bar-left">
+    <div class="item-box">
+      <img src="images/dirt.png" alt="" class="item-icon">
+      <span class="item-counter" id="dirt-counter">0</span>
+    </div>
+    <div class="item-box">
+      <img src="images/stone.png" alt="" class="item-icon">
+      <span class="item-counter" id="stone-counter">0</span>
+    </div>
+    <div class="item-box">
+      <img src="images/iron.png" alt="" class="item-icon">
+      <span class="item-counter" id="iron-counter">0</span>
+    </div>
+    <div class="item-box">
+      <img src="images/diamond.png" alt="" class="item-icon">
+      <span class="item-counter" id="diamond-counter">0</span>
+    </div>
+  </div>
+<!-- CRAFT BAR -->
+  <div class="card item-bar bar-right">
+    <div class="item-box">
+
+      <div class="tooltip-3" id="pokeball-tooltip">
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/stone.png" alt="">
+          <span class="item-counter">5</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/iron.png" alt="">
+          <span class="item-counter">1</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/diamond.png" alt="">
+          <span class="item-counter">1</span>
+        </div>
+      </div>
+
+      <img class="item-icon" id = "pokeball-trigger" src="images/pokeball-icon.png" alt="">
+      <span class="item-counter">+5</span>
+    </div>
+
+    <div class="item-box">
+
+      <div class="tooltip-2" id="icepotion-tooltip">
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/dirt.png" alt="">
+          <span class="item-counter">2</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/diamond.png" alt="">
+          <span class="item-counter">1</span>
+        </div>
+      </div>
+
+      <img class="item-icon" id = "icepotion-trigger" src="images/icepotion.png" alt="">
+      <span class="item-counter">Ice</span>
+    </div>
+
+    <div class="item-box">
+
+      <div class="tooltip-2" id="firepotion-tooltip">
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/stone.png" alt="">
+          <span class="item-counter">15</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/iron.png" alt="">
+          <span class="item-counter">3</span>
+        </div>
+      </div>
+
+      <img class="item-icon" id = "firepotion-trigger" src="images/firepotion.png" alt="">
+      <span class="item-counter">Fire</span>
+    </div>
+
+    <div class="item-box">
+
+      <div class="tooltip-3" id="slimescroll-tooltip">
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/stone.png" alt="">
+          <span class="item-counter">50</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/dirt.png" alt="">
+          <span class="item-counter">10</span>
+        </div>
+        <div class="item-box tooltip-box">
+          <img class="item-icon" src="images/diamond.png" alt="">
+          <span class="item-counter">5</span>
+        </div>
+      </div>
+
+      <img class="item-icon" id = "slimescroll-trigger" src="images/slimescroll.png" alt="">
+      <span class="item-counter">Sli.</span>
+    </div>
+
+  </div>
+
+  <!-- MINECRAFT -->
+  <br><br>
+  <div class="card">
+    <div class="minecraft-wrapper">
+      <table class="minecraft-table">
+        <td class="minecraft-block">
+          <img class="minecraft-block-img" id="block-1" src="images/dirtblock.png" alt="">
+          <div class="block-bar">
+            <div class="block-bar-in" id="bar-1"></div>
+          </div>
+        </td>
+        <td class="minecraft-block">
+          <img class="minecraft-block-img" id="block-2" src="images/dirtblock.png" alt="">
+          <div class="block-bar">
+            <div class="block-bar-in" id="bar-2"></div>
+          </div>
+        </td>
+        <td class="minecraft-block">
+          <img class="minecraft-block-img" id="block-3" src="images/dirtblock.png" alt="">
+          <div class="block-bar">
+            <div class="block-bar-in" id="bar-3"></div>
+          </div>
+        </td>
+        <td class="minecraft-block">
+          <img class="minecraft-block-img" id="block-4" src="images/dirtblock.png" alt="">
+          <div class="block-bar">
+            <div class="block-bar-in" id="bar-4"></div>
+          </div>
+        </td>
+        <td class="minecraft-block">
+          <img class="minecraft-block-img" id="block-5" src="images/dirtblock.png" alt="">
+          <div class="block-bar">
+            <div class="block-bar-in" id="bar-5"></div>
+          </div>
+        </td>
+      </table>
+    </div>
+    <img src="" alt="">
+    <h1>Encouraging Exploration</h1>
+    <p>My work combines simple mechanics set in complex worlds,
+      focusing on themes of exploration, discovery, and customization.
+      I look to make games that a young child can play, but an adult can master
+      – ones that port people of all ages to another world. My goal in game-making
+      is not to make games that force the players hand, but rather construct an experience
+    as casual or challenging as they want.</p>
+  </div>
+  <br><br />
+  <!-- POKEMON -->
+  <div class="card pokemon-card">
+    <div class="pokemon-wrapper">
+      <div class="pokemon-wrapper-trees">
+      </div>
+      <div class="pokeball">
+        <span class="pokeball-counter">2</span>
+      </div>
+    </div>
+    <h1>Simple Mechanics, Complex Game</h1>
+    <p>Through digital media and open source software such as Unity, Photoshop, and Pixlr, I create
+    games with simple mechanics, but set in a complex environment. Games like Pokemon, Minecraft, and Genshin Impact,
+    demonstrate the allure of an open world heavy laden with customization: we choose and enjoy the many paths that lie ahead. Game saves in exploration games
+    function as achievements of individuality – a unique triumph made by the complex sum of simple actions: crafting, story choices, upgrades, and more.</p>
+<button class="tutorial-button">What do I mean?</button>
+<br>
+  </div>
+  <br><br>
+  <!-- RPG Game -->
+  <div class="card">
+    <div class="rpg-wrapper">
+      <div class="rpg-enemy-slime rpg-enemy">
+        <div class="health-bar"><div class="health-bar-in"></div></div>
+      </div>
+    </div>
+    <div class="win-bar">
+<p>Slime Defeated! Pickaxe Improved!</p>
+    </div>
+    <h1>On the Horizon</h1>
+    <p>Drawing on the importance of exploration, discovery, and customization, I look to develop a game centered around a common RPG mechanic: defeat.
+    While most games use defeat or death as a deterrent or difficulty ramp, I want to turn it into an opportunity – a game where losing strategically can sometimes
+    be the only way to win. Although the development is still in progress, you will play as a character that can inherit the traits and powers of those that defeat you. These traits can help you, hurt you, or do both!
+    In this game, not every opponent or friend you face will be hostile, and convincing them to defeat you will be harder than convincing them to let you live.</p>
+  </div>
+<br><br>
+  <div class="card">
+    <h1>Image Attributions</h1>
+    <p>Pokemon Sprites were taken from original game, and pulled from a site aggregate <a href="https://pokemondb.net/sprites">here</a> </p>
+    <p>Background image is free and taken from originalme2 on <a href="https://www.vecteezy.com/vector-art/117941-electric-type-pokemon-pattern">vecteezy</a> </p>
+    <p>Minecraft images taken within the game as screenshots</p>
+    <p>Slime, Potions, and Scroll were drawn using <a href="http://pixelartmaker.com/">pixelartmaker.com</a> </p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="artistStatement.js" charset="utf-8"></script>
+</body>
+
+</html>

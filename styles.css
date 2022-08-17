@@ -1,0 +1,336 @@
+body {
+  background-image: url("images/pokemon.jpg");
+  background-repeat: repeat-y repeat-x;
+  text-align: center;
+  width: 100vw;
+}
+h1{
+  font-family: "Nunito", monospace;
+  color:#505463;
+}
+a{
+  text-decoration: none;
+  font-family: "Nunito", monospace;
+  color:#664f14;
+}
+p{
+  font-family: "Nunito", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+img{
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+@keyframes gold-hover {
+  from{color:#664f14;}
+  to{color: #c49825}
+}
+a:hover{
+  animation: gold-hover 0.3s forwards;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  padding: 30px;
+  display: inline-block;
+  background-color: white;
+  position: relative;
+  max-width: 500px;
+}
+.centerBox{
+  position: relative;
+}
+.centerChild{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pokemon-wrapper{
+  position: absolute;
+  bottom: 85%;
+  height: 70px;
+  width: 80%;
+  left: 10%;
+}
+.pokemon-wrapper-trees{
+  background-image: url("images/tree.png");
+  background-repeat: space;
+  width: 100%;
+  height: 100%;
+}
+.pokemon{
+  position: absolute;
+  bottom: 0%;
+  user-select: none;
+}
+.pokemon:hover{
+  animation-play-state: paused;
+  filter: grayscale(100%);
+}
+.walk{
+  left:0%;
+  animation: pokemon-walk 10s infinite;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.walk-fast{
+  animation-duration: 10s;
+}
+@keyframes pokemon-walk {
+  0% {left: 0%}
+  49% {left: 100%;}
+  50% {-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+  51% {-webkit-transform: none; transform: none;}
+  98% {left: 0%;}
+  99%{ -webkit-transform: none; transform: none;}
+  100% {-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+}
+.walk-slow{
+  animation-duration: 20s;
+}
+.walk-variable{
+  animation-duration: 15s;
+}
+.pokeball{
+  background-image: url("images/pokeball.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 80px;
+  height: 100px;
+  background-position: left;
+}
+.pokeball:active{
+  animation: pokeball-open 0.07s forwards step-end;
+}
+.pokeball-counter{
+  position: absolute;
+  left: 25%;
+  top: 18%;
+  color: white;
+  font-style: oblique;
+  font-size: 30px;
+  text-shadow: 2px 2px #3d2415;
+  font-family: "Teko", monospace;
+  user-select: none;
+}
+@keyframes pokeball-open{
+  0%{background-position: left;}
+  50%{background-position: center;}
+  100%{background-position: right;}
+}
+.minecraft-wrapper{
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 280px;
+  cursor: url("images/pickaxe.png") 30 0, auto;
+}
+.minecraft-table{
+  position: absolute;
+  left: -50%;
+}
+.minecraft-block{
+  border: 1px solid black;
+  width:50px;
+  height:50px;
+  position: relative;
+  user-select: none;
+}
+.minecraft-block-img{
+  width: 100%;
+  height: 100%;
+  margin: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.minecraft-block-img:active{
+  filter: brightness(1.2);
+}
+.minecraft-block:active{
+  border-color: red;
+}
+.block-bar{
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom:-15px;
+  left: 0px;
+  background-color: gray;
+
+}
+.block-bar-in{
+  width: 100%;
+  height: 10px;
+  background-color: #54c45e;
+}
+.item-bar{
+  position: fixed;
+  background-color: #b8b3a3;
+  padding: 5px;
+  padding-right: 20px;
+  z-index:10;
+}
+.item-box{
+  position: relative;
+}
+.item-icon{
+  width: 50px;
+}
+.item-counter{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  font-style: oblique;
+  font-size: 20px;
+  text-shadow: 2px 2px #3d2415;
+  font-family: "Teko", monospace;
+  user-select: none;
+}
+.bar-right{
+  right: 0;
+}
+.bar-left{
+  left: 0;
+}
+.tooltip-3{
+  position: absolute;
+  left: -210px;
+  max-height: 50px;
+  max-width: 200px;
+  z-index: 10;
+  background-color: #9c9384;
+  padding: 5px;
+  border-radius: 10px;
+}
+.tooltip-2{
+  position: absolute;
+  left: -150px;
+  max-height: 50px;
+  max-width: 200px;
+  z-index: 10;
+  background-color: #9c9384;
+  padding: 5px;
+  border-radius: 10px;
+}
+.tooltip-1{
+  position: absolute;
+  left: -80px;
+  max-height: 50px;
+  max-width: 200px;
+  z-index: 10;
+  background-color: #9c9384;
+  padding: 5px;
+  border-radius: 10px;
+}
+.tooltip-box{
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#pokeball-tooltip{
+  display: none;
+}
+.rpg-wrapper{
+  position: absolute;
+  top: -10%;
+  height: 70px;
+  width: 80%;
+  left: 10%;
+}
+.rpg-enemy-slime{
+  position: absolute;
+  background-image: url("images/slime.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  width: 80px;
+  height: 100px;
+  animation: slime-walk 8s infinite;
+  -webkit-transform: scaleX(-1);
+  cursor: url("images/sword.png"), auto;
+}
+@keyframes slime-walk{
+  0%{left:0%}
+  50%{left: 100%}
+  100%{left:0%}
+}
+.rpg-enemy-slime:active{
+  background-position:right;
+}
+.frozen{
+  filter: hue-rotate(90deg);
+}
+.health-bar{
+  background-color: gray;
+  width: 80%;
+  height: 10px;
+  position: absolute;
+  left: 21%;
+  animation: move-health-bar 10s infinite;
+}
+.health-bar-in{
+  background-color: green;
+  width: 100%;
+  height: 100%;
+}
+.tutorial-wrapper{
+  width: 103vw;
+  height: 103vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tutorial-overlay{
+  opacity: 30%;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.tutorial-button{
+  font-family: "Nunito", sans-serif;
+  border-radius: 20px;
+  border: 1px solid #505463;
+  background-color: white;
+  color: #505463;
+  padding: 10px;
+}
+.tutorial-button:hover{
+  animation: btn-hover 0.1s forwards;
+}
+@keyframes btn-hover{
+  from{background-color: white; color: #505463;}
+  to{background-color: #505463; color: white;}
+}
+.tutorial-card{
+  opacity: 100%;
+  margin-top: 30px;
+  min-width: 500px;
+  position: fixed;
+  left: calc(50% - 275px);
+}
+.win-bar{
+  position: absolute;
+  top: -10%;
+  left: 150px;
+  border-radius: 50px;
+  padding: none;
+  background-color: #b6e841;
+  border: 3px solid #579407;
+  color: #579407;
+  font-weight: bolder;
+  filter: saturate(0.6);
+  font-family: "Teko", monospace;
+}
